@@ -1,0 +1,147 @@
+/* ===== Reset and Basic Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0b1a13;
+  color: #e6f4e7;
+  min-height: 100vh;
+}
+
+/* ===== Navbar ===== */
+nav {
+  background-color: #0f2e1f;
+  color: #dfffe5;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  color: #6df09c;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* ===== Search Bar ===== */
+.search-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-container input
+{
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #3a5f47;
+  outline: none;
+  font-size: 1rem;
+  width: 230px;
+  background-color: #16281c;
+  color: #d4f3dc;
+}
+
+.search-container input::placeholder {
+  color: #89bfa0;
+}
+
+.search-container button {
+  padding: 10px 16px;
+  background-color: #218c53;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #1a6e42;
+}
+
+/* ===== Main Content ===== */
+.obj-width {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* ===== News Cards ===== */
+#block-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.block-card {
+  background: #123222;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.block-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2fbf75;
+}
+
+.block-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.block-card h2 {
+  font-size: 1.1rem;
+  margin: 15px;
+  color: #a7f7bf;
+}
+
+.block-card p {
+  font-size: 0.95rem;
+  margin: 0 15px 20px;
+  color: #c1e7cd;
+  line-height: 1.4;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .search-container input {
+    width: 150px;
+    font-size: 0.9rem;
+  }
+
+  .search-container button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .block-card h2 {
+    font-size: 1rem;
+  }
+
+  .block-card p {
+    font-size: 0.85rem;
+  }
+}
