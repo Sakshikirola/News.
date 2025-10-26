@@ -32,3 +32,6 @@ Users can search for any topic and instantly get live, relevant news results.
 2. The user can search for any keyword (like “technology”, “sports”, etc.).
 3. JavaScript dynamically fetches and displays articles from the `everything` endpoint.
 4. Clicking any article opens the full news story in a new browser tab.
+ > ⚠️ Note: NewsAPI doesn’t allow requests directly from browser on free plans.
+> The live demo (GitHub Pages) won’t show news data, but the code works perfectly when run locally.
+
